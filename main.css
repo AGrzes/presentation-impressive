@@ -1,0 +1,153 @@
+body {
+    background-color: lightgray;
+    font-size: 200%;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    /* align vertical */
+    flex-direction: column;
+}
+.step.active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.future.step:not(.active) {
+    opacity: 0;
+}
+
+#traditional .slide {
+    width: 750px;
+    height: 750px;
+    border-radius: 10px;
+    background-color: white;
+    border:black 1px solid;
+}
+#traditional .slide h1 {
+    height: 10%;
+    width: 90%;
+    border-bottom: solid black 2px;
+}
+#traditional .slide ul {
+    height: 90%;
+    width: 90%;
+}
+
+#dynamic .slide {
+    width: 750px;
+    height: 750px;
+    border-radius: 50px;
+    background-color: white;
+    border:black 1px solid;
+}
+#dynamic .slide h1 {
+    border-bottom: solid black 2px;
+}
+#dynamic .slide ul {
+    position: absolute;
+    list-style: none;
+}
+#dynamic .slide ul li:nth-child(1) {
+    transform: rotate(45deg);
+    top:80px;
+    position:absolute;
+}
+#dynamic .slide ul li:nth-child(2) {
+    transform: rotate(-45deg);
+    top:80px;
+    left:-300px;
+    position:absolute;
+
+}
+
+#dynamic .slide ul li:nth-child(3) {
+    transform: rotate(-90deg);
+    top:-320px;
+    left:-80px;
+    position:absolute;
+}
+
+#impress-js .slide {
+    width: 750px;
+    height: 750px;
+    border-radius: 150px;
+    background-color: white;
+    border:black 1px solid;
+}
+#impress-js .slide iframe {
+    height: 50%;
+    width: 70%;
+    border: 0px;
+}
+
+#impressive .slide {
+    width: 750px;
+    height: 750px;
+    border-radius: 300px;
+    background-color: white;
+    border:black 1px solid;
+}
+
+#impressive-dynamic .slide {
+    width: 750px;
+    height: 750px;
+    border-radius: 150px;
+    background-color: white;
+    border:black 1px solid;
+}
+#impressive-embed .slide {
+    width: 750px;
+    height: 750px;
+    border-radius: 150px;
+    background-color: white;
+    border:black 1px solid;
+}
+
+#for-who .slide {
+    width: 750px;
+    height: 750px;
+    border-radius: 375px;
+    background-color: white;
+    border:black 1px solid;
+}
+
+#why .slide {
+    width: 750px;
+    height: 750px;
+    border-radius: 375px;
+    background: radial-gradient(white, white, rgba(0,0,0,0));
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.blink {
+    animation: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#animations {
+    animation: roll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
